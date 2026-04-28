@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camba Muebles — Catálogo Mayorista</title>
+  <link rel="stylesheet" href="catalogo-camba.css">
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="logo">
+      <img class="logo-icon" src="imagenes/LOGO.png" alt="Logo Camba Muebles">
+      <div>
+        <h1>CAMBA MUEBLES</h1>
+        <span>Madera & Hierro</span>
+      </div>
+    </div>
+    <div class="header-badge">Venta Mayorista</div>
+  </div>
+  <nav class="header-nav">
+    <button type="button" class="nav-btn active" onclick="filterCat('todos',this)">Todos</button>
+    <button type="button" class="nav-btn" onclick="filterCat('escritorios',this)">Escritorios</button>
+    <button type="button" class="nav-btn" onclick="filterCat('mesas-comedor',this)">Mesas de Comedor</button>
+    <button type="button" class="nav-btn" onclick="filterCat('mesas-ratona',this)">Mesas Ratona</button>
+    <button type="button" class="nav-btn" onclick="filterCat('estantes',this)">Estantes / Racks</button>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>Catálogo Mayorista</h2>
+  <p>🏭 Fábrica Propia - Corrientes Capital</p>
+  <div class="hero-tags">
+    <span class="tag">🪵 Madera Maciza</span>
+    <span class="tag">⚙️ Hierro</span>
+    <span class="tag">📦 Venta por Mayor</span>
+    <span class="tag">✏️ Medidas estandar</span>
+  </div>
+</div>
+
+<main>
+  <div id="catalog"></div>
+</main>
+
+<footer>
+  <strong>CAMBA MUEBLES - Muebles de Madera Maciza & Hierro</strong><br>
+  Fabricantes y Mayoristas · Corrientes Capital, Argentina<br>
+  Especializados en muebles industriales · Producción propia · Atención exclusiva a revendedores y decoradores<br><br>
+  <span style="font-size:0.75rem">Precios en pesos argentinos · Sujetos a variación · Consultar stock disponible</span>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lb-close" onclick="closeLightbox()">✕</button>
+  <button type="button" class="lb-prev" onclick="lbMove(-1)">‹</button>
+  <img class="lb-img" id="lb-img" src="" alt="">
+  <button type="button" class="lb-next" onclick="lbMove(1)">›</button>
+  <div class="lb-caption" id="lb-caption"></div>
+</div>
+
+<a class="wa-float" id="wa-main" href="#" target="_blank" rel="noopener noreferrer">
+  <span style="font-size:1.4rem">💬</span>
+  Consultar por Mayor
+</a>
+
+<script src="catalogo-camba.js"></script>
+</body>
+</html>
